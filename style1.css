@@ -1,0 +1,130 @@
+/* 1. تنسيق الجسم والخلفية البرتقالية */
+body {
+    background-color: #bc6963; /* برتقالي ساطع ومائل للاحمرار قليلاً */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+    margin: 0;
+    overflow: auto; 
+    font-family: 'Poppins', sans-serif;
+    padding: 40px 0; 
+}
+
+/* 2. حاوية تسجيل الدخول الرئيسية (أول <div>) */
+/* سنستخدمه كـ الصندوق الأبيض الرئيسي */
+body > div:first-child { 
+    background-color: #ffffff;
+    width: 320px;
+    padding: 20px 0 25px 0; 
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+    position: relative;
+    text-align: center;
+    /* إزالة الـ <br> الزائدين من أعلى وأسفل الـ form عبر استخدام margin-top سلبي */
+    margin-top: -30px; 
+}
+/* 5. تنسيق العنوان "Member Login" */
+#Change_Password {
+    font-size: 1.5em;
+    color: #555555;
+    font-weight: 400;
+    margin-top: 50px; 
+    margin-bottom: 25px;
+    font-family: 'Lato', sans-serif;
+}
+
+/* 6. تنسيق حقول الإدخال */
+form input[type="text"], 
+form input[type="password"] {
+    width: 75%;
+    padding: 12px 10px;
+    margin-bottom: 18px;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 1em;
+    color: #333;
+    background-color: #f8f8f8;
+    text-align: center; /* 👈 يخلي النص والـ placeholder في النص */
+}
+
+/* تنسيق placeholder لوحده (اختياري) */
+form input::placeholder {
+    text-align: center; /* 👈 يخلي الـ placeholder بس في النص */
+    color: #aaa;        /* ممكن تخليه رمادي فاتح */
+}
+form input[type="submit"] {
+    width: 75%;
+    padding: 14px;
+    background-color: #4a90e2; 
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 1em;
+    
+    
+    cursor: pointer;
+    margin-top: 15px; 
+    box-shadow: 0 4px 0 #3a79c5; 
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.2s ease; /* عشان الحركة تبقى ناعمة */
+}
+
+/* لما تقفي عليه */
+form input[type="submit"]:hover {
+    transform: translateY(2px);               /* يتحرك شوية لتحت */
+    box-shadow: inset 0 3px 5px rgba(0,0,0,0.2); /* يبان كأنه دخل لجوة */
+}
+
+/* لما تضغطي عليه */
+form input[type="submit"]:active {
+    background-color: #357ab8; /* لون أزرق أغمق */
+    box-shadow: inset 0 3px 5px rgba(0,0,0,0.3); /* يفضل لجوة */
+    transform: translateY(2px);
+}
+/* 8. رابط "forget password?" */
+form a {
+    color:#4a90e2; 
+    text-decoration: none;
+    font-size: 0.9em;
+    display: block;
+    padding-top: 15px; 
+    padding-bottom: 25px; 
+    /* تحويل الحروف إلى أول حرف كبير كما في الصورة */
+    text-transform: capitalize; 
+}
+a:link {
+  color: #4a90e2; /* اللون الافتراضي */
+  text-decoration: none;
+}
+
+a:visited {
+  color: #4a90e2; /* نفس اللون بتاع العادي */
+}
+
+a:hover {
+    color: #f44336; /* اللون لما تقفي عليه */
+    text-decoration: underline;
+}
+
+a:active {
+  color: #333; /* لحظة الضغط */
+}
+
+#Form {
+    background-color: #fff;
+    width: 300px;
+    padding: 40px 20px;
+    border-radius: 6px;
+    box-shadow: 08px 12px 20px 0px #000000a1; /* ظل بسيط */
+    text-align: center;
+    position: relative;
+}
+
+
+input.error {
+  border: 2px solid red;
+  background-color: #ffe6e6;
+}

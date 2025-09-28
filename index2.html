@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <div id="Form">
+        <div>
+            <img src="profile1.jpg" id="profil_image">
+        </div>
+
+        <form id="resetForm">
+            <h1 id="Register">
+                Register
+            </h1>
+
+            <input type="text" required placeholder="First Name">
+
+            <input type="text" required placeholder="last Name">
+
+            <input type="text" required placeholder="User Name">
+
+            <input type="password"id="new_password" required placeholder="Password" minlength="8">
+
+            <input type="password"id="confirm_password" required placeholder="comfirm Password" minlength="8">
+
+            
+    <div class="gender-group">
+        <label>Gender</label>
+      <label><input type="radio" name="gender" value="male" checked> Male</label>
+      <label><input type="radio" name="gender" value="female"> Female</label>
+    </div>
+
+    <!-- Birthday -->
+    <label for="birthday">Birthday</label>
+    <input type="date" id="birthday" required>
+
+            
+<!-- الرسالة الحمراء -->
+  <div id="errorMsg" style="color:red; font-size:0.9em; display:none;">
+    Passwords do not match!
+  </div>
+            <input type="submit" value="Reset">
+<br>
+            <a href="index.html">I have alredy an acount</a>
+        </form>
+    </div>
+
+    <script>
+document.getElementById("resetForm").addEventListener("submit", function(e) {
+  const newPass = document.getElementById("new_password");
+  const confirmPass = document.getElementById("confirm_password");
+  const errorMsg = document.getElementById("errorMsg");
+
+  if (newPass.value !== confirmPass.value) {
+    e.preventDefault(); // يمنع الفورم يتبعت
+    confirmPass.classList.add("error"); 
+    errorMsg.style.display = "block"; // تظهر الرسالة الحمراء
+  } else {
+    confirmPass.classList.remove("error");
+    errorMsg.style.display = "none"; // تخفي الرسالة لو تمام
+    // هنا ممكن تسيبي الفورم يتبعت عادي
+  }
+});
+</script>
+
+</body>
+
+</html>
