@@ -1,19 +1,18 @@
-/* 1. تنسيق الجسم والخلفية البرتقالية */
+
 body {
-    background-color: #bc6963; /* برتقالي ساطع ومائل للاحمرار قليلاً */
+    background-color: #bc6963; 
     flex-direction: column; 
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
-    min-height: 100vh;         /* على الأقل طول الشاشة */
+    min-height: 100vh;         
     overflow: auto; 
     font-family: 'Poppins', sans-serif;
     padding: 40px 0; 
 }
 
-/* 2. حاوية تسجيل الدخول الرئيسية (أول <div>) */
-/* سنستخدمه كـ الصندوق الأبيض الرئيسي */
+
 body > div:first-child { 
     background-color: #ffffff;
     width: 320px;
@@ -22,7 +21,6 @@ body > div:first-child {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
     position: relative;
     text-align: center;
-    /* إزالة الـ <br> الزائدين من أعلى وأسفل الـ form عبر استخدام margin-top سلبي */
     margin-top: -30px; 
 }
 
@@ -32,34 +30,30 @@ body > div > div:first-child {
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
-    width: 100px;  /* أكبر شوية من الصورة */
+    width: 100px;  
     height: 100px;
     border-radius: 50%;
     background-color: transparent;
 
-    display: flex;              /* 👈 يخلّي المحتوى يتوسّط */
-    justify-content: center;    /* أفقياً */
-    align-items: center;        /* رأسياً */
+    display: flex;              
+    justify-content: center;    
+    align-items: center;       
 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* 4. تنسيق أيقونة المستخدم (الصورة في الـ HTML الأصلي) */
-/* بما أنكِ استخدمتِ وسم <img>، سنخفيه ونستخدم الـ CSS لرسم الأيقونة فوقه */
 #profil_image {
     
     width: 150px; 
     height: 150px;
-    border-radius: 50%;         /* يخلي الصورة دائرية */
+    border-radius: 50%;         
     display: block;
-    
-    /* هنا بقى الظل */
     box-shadow: 08px 12px 20px 0px #000000a1;
         
 }
 
 
-/* 5. تنسيق العنوان "Member Login" */
+
 #Member_Login {
     font-size: 1.5em;
     color: #555555;
@@ -69,7 +63,7 @@ body > div > div:first-child {
     font-family: 'Lato', sans-serif;
 }
 
-/* 6. تنسيق حقول الإدخال */
+
 form input[type="text"], 
 form input[type="password"] {
     width: 75%;
@@ -81,16 +75,16 @@ form input[type="password"] {
     font-size: 1em;
     color: #333;
     background-color: #f8f8f8;
-    text-align: center; /* 👈 يخلي النص والـ placeholder في النص */
+    text-align: center; 
 }
 
-/* تنسيق placeholder لوحده (اختياري) */
+
 form input::placeholder {
-    text-align: center; /* 👈 يخلي الـ placeholder بس في النص */
-    color: #aaa;        /* ممكن تخليه رمادي فاتح */
+    text-align: center;
+    color: #aaa;       
 }
 
-/* 7. زر تسجيل الدخول */
+
 form input[type="submit"] {
     width: 75%;
     padding: 14px;
@@ -105,22 +99,22 @@ form input[type="submit"] {
     margin-top: 15px; 
     box-shadow: 0 4px 0 #3a79c5; 
     font-family: 'Poppins', sans-serif;
-    transition: all 0.2s ease; /* عشان الحركة تبقى ناعمة */
+    transition: all 0.2s ease; 
 }
 
-/* لما تقفي عليه */
+
 form input[type="submit"]:hover {
-    transform: translateY(2px);               /* يتحرك شوية لتحت */
-    box-shadow: inset 0 3px 5px rgba(0,0,0,0.2); /* يبان كأنه دخل لجوة */
+    transform: translateY(2px);              
+    box-shadow: inset 0 3px 5px rgba(0,0,0,0.2); 
 }
 
-/* لما تضغطي عليه */
+
 form input[type="submit"]:active {
-    background-color: #357ab8; /* لون أزرق أغمق */
-    box-shadow: inset 0 3px 5px rgba(0,0,0,0.3); /* يفضل لجوة */
+    background-color: #357ab8; 
+    box-shadow: inset 0 3px 5px rgba(0,0,0,0.3); 
     transform: translateY(2px);
 }
-/* 8. رابط "forget password?" */
+
 form a {
     color: #4a90e2; 
     text-decoration: none;
@@ -128,25 +122,24 @@ form a {
     display: block;
     padding-top: 15px; 
     padding-bottom: 25px; 
-    /* تحويل الحروف إلى أول حرف كبير كما في الصورة */
     text-transform: capitalize; 
 }
 a:link {
-  color: #4a90e2; /* اللون الافتراضي */
+  color: #4a90e2; 
   text-decoration: none;
 }
 
 a:visited {
-  color: #4a90e2; /* نفس اللون بتاع العادي */
+  color: #4a90e2; 
 }
 
 a:hover {
-  color: #f44336; /* اللون لما تقفي عليه */
+  color: #f44336; 
   text-decoration: underline;
 }
 
 a:active {
-  color: #333; /* لحظة الضغط */
+  color: #333;
 }
 
 #Form {
@@ -154,13 +147,13 @@ a:active {
     width: 300px;
     padding: 40px 20px;
     border-radius: 6px;
-    box-shadow: 08px 12px 20px 0px #000000a1; /* ظل بسيط */
+    box-shadow: 08px 12px 20px 0px #000000a1; 
     text-align: center;
     position: relative;
         transform: translateY(80px); 
 }
 
-/* الفوتر */
+
 footer {
     
     text-align: center;
@@ -169,8 +162,8 @@ footer {
     font-size: 16px;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
     border-radius: 15px 15px 0 0;
-    width: 100%;   /* 👈 ياخد الشاشة كلها */
+    width: 100%;   
     
-    margin-top: auto;  /* 👈 دي اللي بتلزقه في أسفل الشاشة */
+    margin-top: auto;  
     
 }
